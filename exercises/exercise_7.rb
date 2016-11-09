@@ -10,3 +10,13 @@ puts "Exercise 7"
 puts "----------"
 
 # Your code goes here ...
+
+prompt = '>'
+
+puts "Specify a store location"
+puts prompt
+location = $stdin.gets.chomp
+
+new_store = Store.create(name: location)
+
+puts new_store.errors.full_messages
